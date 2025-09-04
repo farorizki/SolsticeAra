@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="icon" href="foto/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donasi untuk Ara - Soulticeara</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body class="donasi-page">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="foto/blue.png" alt="Logo Soulticeara" class="logo" />
+      <h1>Solsticeara</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Beranda</a></li>
+        <li><a href="info.html">Tentang Ara</a></li>
+        <li><a href="#">Update</a></li>
+        <li><a href="donasi.html">Donasi</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="gabung.html">Gabung</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FORM DONASI -->
+  <main class="donasi-container">
+    <div style="height: 80px;"></div> <!-- Dummy spacer -->
+    <h2>Donasi untuk Project STS Ara 🎁</h2>
+    <p>Dukung project ulang tahun, event fanbase, dan banyak lagi!</p>
+
+    <form class="form-donasi">
+        <!-- Popup QR Code -->
+    <div id="qr-popup" class="qr-popup hidden">
+    <div class="qr-content">
+      <span class="close-btn" onclick="closeQR()">×</span>
+      <img id="qr-image" src="" alt="QR Code Donasi" />
+      <p id="qr-label"></p>
+    </div>
+    </div>
+  
+      <label for="nama">Nama Anda:</label>
+      <input type="text" id="nama" name="nama" required placeholder="Nama lengkap Anda" />
+
+      <label for="nominal">Nominal Donasi (Rp):</label>
+      <input type="number" id="nominal" name="nominal" required placeholder="Contoh: 50000" />
+
+      <label for="bukti-transfer">Unggah Bukti Transfer:</label>
+      <input type="file" id="bukti-transfer" name="bukti" accept=".jpg,.jpeg,.png,.pdf" required>
+
+
+      <div class="transfer-options">
+        <button type="button" class="btn-transfer gopay" onclick="showQR('gopay')">Transfer via GoPay</button>
+        <button type="button" class="btn-transfer bca" onclick="showQR('bca')">Transfer via BCA</button>
+        <button type="button" class="btn-transfer ovo" onclick="showQR('ovo')">Transfer via OVO</button>
+      </div>
+    </form>
+  </main>
+  <script>
+    function showQR(method) {
+      const qrImage = document.getElementById("qr-image");
+      const qrLabel = document.getElementById("qr-label");
+      const popup = document.getElementById("qr-popup");
+  
+      // Atur path dan label sesuai metode pembayaran
+      if (method === "gopay") {
+        qrImage.src = "foto/gopay-qr.png";
+        qrLabel.innerText = "Scan QR GoPay";
+      } else if (method === "bca") {
+        qrImage.src = "bca-qr.png";
+        qrLabel.innerText = "Scan QR BCA";
+      } else if (method === "ovo") {
+        qrImage.src = "ovo-qr.png";
+        qrLabel.innerText = "Scan QR OVO";
+      }
+  
+      popup.classList.remove("hidden");
+    }
+  
+    function closeQR() {
+      document.getElementById("qr-popup").classList.add("hidden");
+    }
+
+    document.querySelector('.form-donasi').addEventListener('submit', function(e) {
+        const nama = document.getElementById('nama').value;
+        const nominal = document.getElementById('nominal').value;
+        const bukti = document.getElementById('bukti-transfer').files.length;
+      
+        if (!nama || !nominal || bukti === 0) {
+          e.preventDefault();
+          alert("Mohon lengkapi semua data dan upload bukti transfer sebelum melanjutkan.");
+        }
+      });
+  </script>
+  
+</body>
+</html>

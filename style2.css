@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #AEE4FF, #ffffff);
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffffcc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;         /* Fix posisi header */
+    top: 0;
+    width: 96%;             /* Agar selebar layar */
+    z-index: 1;           /* Agar di atas konten lain */
+    backdrop-filter: blur(8px); /* Efek blur transparan */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #005b99;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: url('bg-stars.png'); /* optional stars background */
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    color: #007acc;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0 10px;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #005b99;
+  }
+  
+  .btn-donate {
+    background-color: #FFD700;
+    color: #333;
+  }
+  
+  .btn-donate:hover {
+    background-color: #e6c200;
+  }
+.donasi-page {
+    background: linear-gradient(to bottom right, #AEE4FF, #ffffff);
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  
+  .donasi-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffffcc;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .donasi-container h2 {
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+  
+  .donasi-container p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .form-donasi {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-donasi label {
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .form-donasi input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  .transfer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn-transfer {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.3s;
+  }
+  
+  .btn-transfer.gopay {
+    background-color: #00aaff;
+  }
+  
+  .btn-transfer.bca {
+    background-color: #1a4da1;
+  }
+  
+  .btn-transfer.ovo {
+    background-color: #8e44ad;
+  }
+  
+  .btn-transfer:hover {
+    opacity: 0.85;
+  }
+
+  /* Popup QR */
+.qr-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .qr-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .qr-content img {
+    max-width: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .qr-content p {
+    font-weight: bold;
+    color: #007acc;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  input[type="file"] {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+  }
+  

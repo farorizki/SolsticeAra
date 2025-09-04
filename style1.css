@@ -1,0 +1,238 @@
+/* Font */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #AEE4FF, #ffffff);
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffffcc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position:fixed;
+    top: 0;
+    z-index: 10;
+    width: 96%;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #005b99;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-image: url('bg-stars.png'); /* optional stars background */
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    color: #007acc;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0 10px;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #005b99;
+  }
+  
+  .btn-donate {
+    background-color: #FFD700;
+    color: #333;
+  }
+  
+  .btn-donate:hover {
+    background-color: #e6c200;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+  }
+  .sosmed {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #f0f9ff;
+    border: 1px solid #cce7ff;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sosmed h3 {
+    color: #007acc;
+  }
+  
+  .sosmed ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sosmed li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .sosmed a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  .sosmed a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Untuk menyembunyikan awalnya */
+  .hidden {
+    display: none;
+  }
+  /* Page khusus sosial media */
+.sosmed-page {
+    background: linear-gradient(to bottom right, #AEE4FF, #ffffff);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #AEE4FF, #ffffff);
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow-y: auto;
+    position: relative;
+    background: linear-gradient(to bottom right, #AEE4FF, #ffffff);
+    min-height: 100vh;
+    padding-top: 20px;  /* Tambahkan agar konten tidak tertutup header */
+    padding-bottom: 100px;
+    overflow-y: auto;
+    position: relative;
+  }
+    
+  /* Kontainer tombol media sosial */
+  .sosmed-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Ubah sosmed-menu agar rapi untuk kartu */
+.sosmed-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  /* Kartu sosial media */
+  .sosmed-card {
+    background-color: #ffffffee;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sosmed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .platform {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+  
+  .sosmed-link {
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .sosmed-link:hover {
+    background-color: #005b99;
+  }  
+  
+  .sosmed-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007acc;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .sosmed-button:hover {
+    background-color: #005b99;
+  }
